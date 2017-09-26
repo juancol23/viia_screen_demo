@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_incidencias"
+            android:icon="@drawable/warning"
+            android:title="Incidencias" />
+        <item
+            android:id="@+id/nav_tarea"
+            android:icon="@drawable/work"
+            android:title="Tarea" />
+        <item
+            android:id="@+id/nav_checklist"
+            android:icon="@drawable/checklist"
+            android:title="Checklist" />
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_reporte"
+            android:icon="@drawable/file"
+            android:title="Reportes" />
+    </group>
+
+    <item android:title="Tabs">
+        <menu>
+            <item
+                android:id="@+id/nav_perfil"
+                android:icon="@drawable/man_user"
+                android:title="Perfil" />
+            <item
+                android:id="@+id/nav_puntos"
+                android:icon="@drawable/camerashutter"
+                android:title="Puntos" />
+            <item
+                android:id="@+id/nav_usuarios"
+                android:icon="@drawable/speedometer"
+                android:title="Usuarios" />
+            <item
+                android:id="@+id/nav_rol"
+                android:icon="@drawable/contacts"
+                android:title="Roles "/>
+        </menu>
+    </item>
+
+</menu>
