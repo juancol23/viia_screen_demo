@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:id="@+id/cordinator_crear_instancia"
-    tools:context="valcolra.viiascreen.com.proyecto_viiascreen.view.CrearIncidencia">
+    tools:context="valcolra.viiascreen.com.proyecto_viiascreen.CrearIncidencia">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"
@@ -72,8 +72,6 @@
 
                 />
 
-
-
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -82,11 +80,11 @@
                     android:id="@+id/crear_incidencia_punto"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/secondary_text"
-                    android:textSize="16sp"
                     android:layout_marginBottom="10dp"
-                    android:hint="Punto" />
-
+                    android:hint="Punto"
+                    android:text=""
+                    android:textColor="@color/secondary_text"
+                    android:textSize="16sp" />
 
 
             </android.support.design.widget.TextInputLayout>
@@ -102,6 +100,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/secondary_text"
                     android:textSize="16sp"
+                    android:text=""
                     android:layout_marginBottom="10dp"
                     android:hint="Service" />
 
@@ -115,7 +114,8 @@
                     android:id="@+id/crear_incidencia_observation"
                     android:hint="Observations"
                     android:layout_width="match_parent"
-                    android:text=""
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+"
                     android:textColor="@color/secondary_text"
                     android:textSize="16sp"
                     android:layout_marginBottom="10dp"

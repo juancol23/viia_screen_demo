@@ -21,6 +21,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/primary_text"
             android:textSize="20sp"
+
             android:id="@+id/numIncidente"
             android:text="0001"/>
 

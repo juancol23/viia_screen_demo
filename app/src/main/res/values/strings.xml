@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Proyecto_ViiaScreen</string>
+    <string name="app_name">ViiaScreen Monitoring</string>
     <string name="title_activity_navegation">Navegation</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -29,4 +29,6 @@
     <string name="password_forget">He olvidado mi contraseña</string>
     <string name="entrar">Entrar</string>
     <string name="crear_incidencia">Crear Incidencia</string>
+    <string name="crear_task">Crear Task</string>
+    <string name="create_checking">Create Checking</string>
 </resources>

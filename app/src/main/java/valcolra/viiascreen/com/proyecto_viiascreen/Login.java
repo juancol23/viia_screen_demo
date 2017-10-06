@@ -38,7 +38,8 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        /*instanciamos*/
+
+  /*instanciamos*/
         mEdiTextUser = (EditText) findViewById(R.id.username);
         mEdiTextPasswordUser = (EditText) findViewById(R.id.password);
         mBtnLogin = (Button) findViewById(R.id.btnLogin);
@@ -49,56 +50,56 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 mProgress.setMessage("Accediendo...");
                 mProgress.show();
-                login();
-
+                //login();
+                welcome();
             }
         });
 
     }
 
     private void login() {
-            StringRequest stringRequest = new StringRequest(Request.Method.GET,validarAccesos ,new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    String email = mEdiTextUser.getText().toString();
-                   Toast.makeText(getApplicationContext(),"Bienvenido: "+email,Toast.LENGTH_SHORT).show();
-                    mProgress.dismiss();
-                    welcome();
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(Login.this,"Detalle de error "+error,Toast.LENGTH_SHORT).show();
-                    mProgress.dismiss();
-                }
-            }){
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-                    Map<String,String> params = new HashMap<String,String>();
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, validarAccesos, new Response.Listener < String > () {
+            @Override
+            public void onResponse(String response) {
+                String email = mEdiTextUser.getText().toString();
+                Toast.makeText(getApplicationContext(), "Bienvenido: " + email, Toast.LENGTH_SHORT).show();
+                mProgress.dismiss();
+                welcome();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(Login.this, "Detalle de error " + error, Toast.LENGTH_SHORT).show();
+                mProgress.dismiss();
+            }
+        }) {
+            @Override
+            protected Map < String, String > getParams() throws AuthFailureError {
+                Map < String, String > params = new HashMap < String, String > ();
 
-                    String email = mEdiTextUser.getText().toString();
-                    String password =mEdiTextPasswordUser.getText().toString();
-                    String grant_type ="password";
-                    params.put("Content-Type", "application/json");
+                String email = mEdiTextUser.getText().toString();
+                String password = mEdiTextPasswordUser.getText().toString();
+                String grant_type = "password";
+                params.put("Content-Type", "application/json");
 
-                    params.put("email",email);
-                    params.put("password",password);
+                params.put("email", email);
+                params.put("password", password);
 
-                    params.put("grant_type",grant_type);
-                    Log.v("Detalles: ",email+","+password);
-
-
-                    return params;
-                }
-
-            };
+                params.put("grant_type", grant_type);
+                Log.v("Detalles: ", email + "," + password);
 
 
-            RequestQueue requestQueue = Volley.newRequestQueue(this);
-            requestQueue.add(stringRequest);
+                return params;
+            }
+
+        };
+
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
     private void welcome() {
-        Intent i = new Intent(getApplicationContext(),Navegation.class);
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(i);
     }
 

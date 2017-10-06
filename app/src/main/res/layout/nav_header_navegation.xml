@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-    android:background="@drawable/fondo_viia"
+    android:background="@drawable/fondo_vi"
 
     android:gravity="bottom"
     android:orientation="vertical"
@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:layout_marginTop="50dp"
         android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -24,7 +25,7 @@
             android:id="@+id/imageView"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/businessman"
+            android:src="@drawable/man_users"
             app:civ_border_width="2dp"
             app:civ_border_color="@color/white"/>
 
@@ -36,8 +37,6 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-
-
             android:src="@drawable/viia_mon_gr" />
     </RelativeLayout>
 
